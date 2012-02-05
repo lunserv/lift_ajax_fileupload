@@ -31,4 +31,13 @@ For more details see:
 
 2. Casbah scala mongodb driver https://github.com/mongodb/casbah
 
+Another examples
+-----------------
+
+1. Example with valums file uploader (https://github.com/valums/file-uploader) - https://github.com/timperrett/lift-file-uploader
+
+2. Example ajax upload with comet https://github.com/mbk/ajaxupload_with_comet
+
+3. Yet another example ajax upload https://github.com/dpp/starting_point/tree/ajax_upload
+
 Have a nice day or night!
