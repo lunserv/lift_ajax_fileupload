@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>Home</title>
+</head>
+<body class="lift:content_id=main">
+	<div id="main" class="lift:surround?with=default;at=content">
+    <span class="lift:tail">
+      <script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
+      <script type="text/javascript" src="js/jquery.iframe-transport.js"></script>
+      <script type="text/javascript" src="js/jquery.fileupload.js"></script>
+    </span>
+    <script type="text/javascript">
+      // <![CDATA[
+      $(function(){
+        $("#file-upload").fileupload({dataType:'json', url:'/uploading', dropZone:$('#image'),
+        done:function(e, data){$("#image").html("<img src='serving/" + data.result.name + "' height='480' width='640' />");}
+        });
+      });
+      // ]]>
+      </script>
+      <div id="image" style="width:640px; height:480px; background:gray"><span>Drop image here</span></div>
+      <form id="file-upload" action="/uploading" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file[]" />
+      </form>
+    </div>
+</body>
+</html>
